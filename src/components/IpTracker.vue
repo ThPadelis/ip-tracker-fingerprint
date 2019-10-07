@@ -9,7 +9,7 @@
             <tbody>
               <tr v-for="(value, name, index) in ipData" :key="index">
                 <td>{{name | beautify}}</td>
-                <td>{{value | beautify}}</td>
+                <td>{{value | uppercase}}</td>
               </tr>
             </tbody>
           </table>
@@ -28,6 +28,11 @@ export default {
       if (text === "") return "-";
       var beautify = text.replace(/([A-Z])/g, " $1");
       return beautify.charAt(0).toUpperCase() + beautify.slice(1);
+    },
+    uppercase(value) {
+      if (!value) return "";
+      value = value.toString();
+      return value.charAt(0).toUpperCase() + value.slice(1);
     }
   },
   data() {

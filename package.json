@@ -48,5 +48,9 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "vue": {
+    "publicPath": "/ip-tracker-fingerprint",
+    "outputDir": "docs"
+  }
 }
