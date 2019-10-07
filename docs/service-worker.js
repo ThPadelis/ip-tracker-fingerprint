@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ip-tracker-fingerprint/precache-manifest.b080c2fca1ae0373a6ed54a375a74e9a.js"
+  "/ip-tracker-fingerprint/precache-manifest.2ea9d826e0432c073a007d622aca9945.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "ip-tracker-fingerprint"});

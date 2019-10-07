@@ -6,7 +6,10 @@
         <p>This project is for educational purposes only. No data is being stored.</p>
         <p>
           Check out the code on
-          <a href="#">Github</a>
+          <a
+            href="https://github.com/ThPadelis/ip-tracker-fingerprint"
+            target="_blank"
+          >Github</a>
         </p>
       </div>
     </div>
