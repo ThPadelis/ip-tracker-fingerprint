@@ -1,6 +1,10 @@
 <template>
   <div>
     <header-panel></header-panel>
+
+    <main>
+      <ip-tracker></ip-tracker>
+    </main>
   </div>
 </template>
 
@@ -9,7 +13,9 @@ export default {
   name: "app",
   components: {
     HeaderPanel: () =>
-      import(/* webpackChunkName: "header-panel" */ "@/components/Header.vue")
+      import(/* webpackChunkName: "header-panel" */ "@/components/Header.vue"),
+    IpTracker: () =>
+      import(/* webpackChunkName: "ip-tracker" */ "@/components/IpTracker.vue")
   }
 };
 </script>
