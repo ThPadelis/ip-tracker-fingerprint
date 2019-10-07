@@ -1,28 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <header-panel></header-panel>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    HeaderPanel: () =>
+      import(/* webpackChunkName: "header-panel" */ "@/components/Header.vue")
   }
-}
+};
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i&display=swap");
+
+html,
+body {
+  font-family: "Ubuntu Mono", monospace;
 }
 </style>
