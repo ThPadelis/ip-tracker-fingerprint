@@ -3,18 +3,21 @@
     <div class="row">
       <div class="col">
         <h4 class="mb-4">Fingerprint</h4>
-        <table class="table table-sm table-striped table-borderless">
-          <tbody>
-            <tr v-for="(f, index) in fingerprint" :key="index">
-              <td>{{f.key | beautify}}</td>
-              <td
-                v-clipboard:copy="f.value"
-                v-clipboard:success="onCopy"
-                v-clipboard:error="onError"
-              >{{f.value | prettyArray | uppercase | truncate(80)}}</td>
-            </tr>
-          </tbody>
-        </table>
+
+        <div class="table-responsive">
+          <table class="table table-sm table-striped table-borderless">
+            <tbody>
+              <tr v-for="(f, index) in fingerprint" :key="index">
+                <td>{{f.key | beautify}}</td>
+                <td
+                  v-clipboard:copy="f.value"
+                  v-clipboard:success="onCopy"
+                  v-clipboard:error="onError"
+                >{{f.value | prettyArray | uppercase}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
@@ -43,7 +46,7 @@ export default {
       });
     },
 
-    onCopy: function(e) {
+    onCopy: function() {
       this.$swal({
         toast: true,
         position: "top-end",
@@ -54,7 +57,7 @@ export default {
       });
     },
 
-    onError: function(e) {
+    onError: function() {
       this.$swal({
         toast: true,
         position: "top-end",

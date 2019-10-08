@@ -1,16 +1,22 @@
 <template>
   <div>
-    <header-panel></header-panel>
+    <header>
+      <header-panel></header-panel>
+    </header>
 
     <main>
-      <hr />
+      <section>
+        <ip-tracker></ip-tracker>
+      </section>
 
-      <ip-tracker></ip-tracker>
-
-      <hr />
-
-      <finger-print></finger-print>
+      <section>
+        <finger-print></finger-print>
+      </section>
     </main>
+
+    <footer>
+      <footer-section></footer-section>
+    </footer>
   </div>
 </template>
 
@@ -25,6 +31,10 @@ export default {
     FingerPrint: () =>
       import(
         /* webpackChunkName: "finger-print" */ "@/components/FingerPrint.vue"
+      ),
+    FooterSection: () =>
+      import(
+        /* webpackChunkName: "footer-section" */ "@/components/FooterSection.vue"
       )
   }
 };
@@ -37,5 +47,13 @@ export default {
 html,
 body {
   font-family: "Ubuntu Mono", monospace;
+}
+
+header,
+footer,
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: solid thin #dee2e6;
 }
 </style>
