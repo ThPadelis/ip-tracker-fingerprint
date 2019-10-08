@@ -23,18 +23,6 @@
 import axios from "axios";
 export default {
   name: "ip-tracker",
-  filters: {
-    beautify(text) {
-      var beautify = text.replace(/([A-Z])/g, " $1");
-      return beautify.charAt(0).toUpperCase() + beautify.slice(1);
-    },
-    uppercase(value) {
-      if (value === "") return "-";
-      if (!value) return "";
-      value = value.toString();
-      return value.charAt(0).toUpperCase() + value.slice(1);
-    }
-  },
   data() {
     return {
       ipData: null

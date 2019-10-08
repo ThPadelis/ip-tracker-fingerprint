@@ -3,7 +3,13 @@
     <header-panel></header-panel>
 
     <main>
+      <hr />
+
       <ip-tracker></ip-tracker>
+
+      <hr />
+
+      <finger-print></finger-print>
     </main>
   </div>
 </template>
@@ -15,7 +21,11 @@ export default {
     HeaderPanel: () =>
       import(/* webpackChunkName: "header-panel" */ "@/components/Header.vue"),
     IpTracker: () =>
-      import(/* webpackChunkName: "ip-tracker" */ "@/components/IpTracker.vue")
+      import(/* webpackChunkName: "ip-tracker" */ "@/components/IpTracker.vue"),
+    FingerPrint: () =>
+      import(
+        /* webpackChunkName: "finger-print" */ "@/components/FingerPrint.vue"
+      )
   }
 };
 </script>
