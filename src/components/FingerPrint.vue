@@ -4,7 +4,7 @@
       <div class="col">
         <h4 class="mb-4">Fingerprint</h4>
 
-        <div class="table-responsive">
+        <div class="table-responsive" v-if="fingerprint">
           <table class="table table-sm table-striped table-borderless">
             <tbody>
               <tr v-for="(f, index) in fingerprint" :key="index">
